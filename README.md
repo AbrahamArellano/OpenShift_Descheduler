@@ -11,3 +11,9 @@ Nodes are under- or over-utilized.
 - Node failure requires pods to be moved.
 
 - New nodes are added to clusters.
+
+##Steps:
+oc create -f rbac.yaml
+oc create configmap descheduler-policy-configmap -n kube-system --from-file=policy.yaml
+oc create -f descheduler-job.yaml -n kube-system
+
