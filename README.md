@@ -12,7 +12,7 @@ Nodes are under- or over-utilized.
 
 - New nodes are added to clusters.
 
-##Steps:
+## Steps:
 oc create -f rbac.yaml
 oc create configmap descheduler-policy-configmap -n kube-system --from-file=policy.yaml
 oc create -f descheduler-job.yaml -n kube-system
